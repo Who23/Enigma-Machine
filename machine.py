@@ -9,6 +9,8 @@ class Machine():
         return(self.plugboard[self.reference.index(letter)])
 
     def addPlugboardConnecion(self, firstLetter, secondLetter):
+        #FIXME: make sure there arent doubling plugboard connectons
+        # and give a warning when changing an existing plugboard connection
         self.plugboard[self.reference.index(firstLetter)] = secondLetter
         self.plugboard[self.reference.index(secondLetter)] = firstLetter
     
